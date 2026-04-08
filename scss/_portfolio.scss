@@ -1,0 +1,65 @@
+.portfolio {
+   font-family: "PFAgoraSansPro";
+   font-weight: 300;
+   position: relative;
+   
+   &__title {
+      padding-top: 40px;
+      padding-left: 15px;
+      
+   }
+
+   &__link{
+      position: absolute;
+      right: 253px;
+      margin-top: 30px;
+      color: rgb(70, 70, 70);
+   }
+
+   &__project {
+      
+      padding-top: 143px;
+      padding-bottom: 60px;
+      
+   }
+
+   &__images {
+      margin: auto 15px;
+      display: flex;
+      justify-content: space-between;
+      padding-right: 15px;
+      gap:20px;
+      
+      
+      
+   }
+   
+   &__image {
+      
+      
+      height: 70vh;
+      
+   }
+
+   &__info {
+      display: flex;
+      justify-content: space-between;
+      padding-top: 20px;
+      padding-left: 15px;
+   }
+
+   &__project-name {
+      word-spacing: 20px;
+   }
+   
+   &__project-slogan {
+      margin-left: 69px;
+   }
+
+   &__description {
+      width: 316px;
+      margin-right: 30px;
+   }
+
+   
+}

@@ -57,7 +57,6 @@ table {
 }
 @font-face {
   font-family: "PFAgoraSansPro";
-  color: red;
   src: url("../fonts/PFAgoraSansPro-Light.eot");
   src: url("../fonts/PFAgoraSansPro-Light.eot?#iefix") format("embedded-opentype"), url("../fonts/PFAgoraSansPro-Light.woff") format("woff"), url("../fonts/PFAgoraSansPro-Light.ttf") format("truetype");
   font-weight: 300;
@@ -75,14 +74,14 @@ table {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  width: 100%;
 }
 
 .line {
   height: 2px;
   background-color: black;
-  width: 95%;
   text-align: center;
-  margin: 0 auto;
+  margin: 0 15px;
 }
 
 .header {
@@ -114,4 +113,50 @@ table {
   font-size: 64px;
   white-space: pre-wrap;
   padding-bottom: 150px;
+}
+
+.portfolio {
+  font-family: "PFAgoraSansPro";
+  font-weight: 300;
+  position: relative;
+}
+.portfolio__title {
+  padding-top: 40px;
+  padding-left: 15px;
+}
+.portfolio__link {
+  position: absolute;
+  right: 253px;
+  margin-top: 30px;
+  color: rgb(70, 70, 70);
+}
+.portfolio__project {
+  padding-top: 143px;
+  padding-bottom: 60px;
+}
+.portfolio__images {
+  margin: auto 15px;
+  display: flex;
+  justify-content: space-between;
+  padding-right: 15px;
+  gap: 20px;
+}
+.portfolio__image {
+  height: 70vh;
+}
+.portfolio__info {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 20px;
+  padding-left: 15px;
+}
+.portfolio__project-name {
+  word-spacing: 20px;
+}
+.portfolio__project-slogan {
+  margin-left: 69px;
+}
+.portfolio__description {
+  width: 316px;
+  margin-right: 30px;
 }/*# sourceMappingURL=style.css.map */
