@@ -103,12 +103,26 @@ table {
   letter-spacing: 5%;
 }
 
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 .main {
   font-family: "PFAgoraSansPro";
   font-weight: 500;
 }
-.main__logo {
+.main__container {
+  display: flex;
   padding: 19px 15px;
+  gap: 8px;
+  justify-content: flex-start;
+}
+.main__logo:last-child {
+  animation: spin 2s ease-in-out infinite;
 }
 .main__title {
   padding-left: 15px;
@@ -191,7 +205,7 @@ table {
   margin-top: 20px;
   margin-bottom: 20px;
   position: absolute;
-  width: calc(100vw - (25vw + 325px + 47px));
+  width: 100%;
   height: 1px;
   background-color: black;
   right: 15px;
@@ -227,11 +241,13 @@ table {
 }
 .contacts__logo {
   height: 70px;
-  grid-area: 1/1/1/1;
+}
+.contacts__logo:last-child {
+  animation: spin 2s ease-in-out infinite;
 }
 .contacts__vector-logo {
-  margin: auto 15px;
-  width: 98vw;
+  margin: auto 20px;
+  width: 97%;
   padding-bottom: 15px;
 }
 .contacts .info {

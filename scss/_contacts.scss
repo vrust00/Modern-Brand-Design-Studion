@@ -22,14 +22,19 @@
 
       &__logo{
          height: 70px;
-         grid-area: 1/1/1/1;
          
+         
+         &:last-child{
+            animation: spin 2s ease-in-out infinite;
+         }
       }
+
+
 
       &__vector-logo{
          
-         margin: auto 15px;
-         width: 98vw;
+         margin: auto 20px;
+         width: 97%;
          padding-bottom: 15px;
 
       }

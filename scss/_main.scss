@@ -1,13 +1,29 @@
+@keyframes spin {
+         0% { transform: rotate(0deg); }
+         100% { transform: rotate(360deg); }
+      }
+
 .main{
    font-family: "PFAgoraSansPro";
    font-weight: 500;
-   
-   &__logo{
+   &__container{
+      display: flex;
       padding: 19px 15px;
+      gap:8px;
+      justify-content:flex-start;
+      
+      
    }
+
+   &__logo:last-child{
+
+      animation: spin 2s ease-in-out infinite;
+      
+
+   }
+
    &__title{
       padding-left: 15px;
-      
       width: 820px;
       font-size: 64px;
       white-space: pre-wrap;
