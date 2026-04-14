@@ -1,0 +1,46 @@
+.other-projects{
+   margin:auto 15px;
+   &__title{
+      font-size: 64px;
+      font-weight: 300;
+      margin: 30px 15px;
+      margin-bottom: 104px;
+   }
+
+   &__project-example-container{
+      display: flex;
+      justify-content: center;
+      margin-bottom: 80px;
+      gap: 15px;
+      
+   }
+
+   &__project{
+      width: 100%;
+
+   }
+
+   &__img{
+      width: 100%;
+   }
+
+   &__link{
+      font-size: 16px;
+      color:grey;
+      display: block;
+      margin-top: 10px;
+   }
+   
+   @media (max-width: 700px) {
+      &__project-example-container{
+         display: block;
+
+
+      }
+      
+      &__project{
+            margin-bottom: 20px;
+            
+         }
+   }
+}

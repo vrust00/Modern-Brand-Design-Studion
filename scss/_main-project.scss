@@ -1,0 +1,89 @@
+.main-project{
+   font-family: "PFAgoraSansPro";
+   font-weight: 300;
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   grid-template-rows: 1fr 1fr 1fr;
+   margin: auto 15px;
+   margin-bottom: 170px;
+   
+
+
+
+   &__subtitle{
+      text-decoration: underline;
+      font-size: 32px;
+      grid-column: 1;
+      grid-row: 2;
+      font-size: 24px;
+      margin-top: 30px;
+   }
+
+   &__title{
+      grid-column: 1;
+      grid-row: 3;
+      font-size: 64px;
+      font-weight: 400;
+      margin-top: -110px;
+   }
+
+   &__description{
+      grid-column: 2;
+      grid-row: 2;
+      font-size: 20px;
+      font-weight: 400;
+      margin-top: 45px;
+      
+   }
+
+   &__subdescription{
+      grid-column: 2;
+      grid-row: 3;
+      white-space: pre-line;
+      font-size: 20px;
+      color:grey;
+      line-height: 1.5;
+      
+   }
+
+   &__container{
+      display: flex;
+      padding: 19px 15px;
+      gap:8px;
+      justify-content:flex-start;
+      grid: 1/1;
+   }
+
+   &__logo:last-child{
+
+      animation: spin 2s ease-in-out infinite;
+   }
+
+   @media (max-width:1300px){
+      display: block;
+      
+      &__title{
+         
+         margin-top:20px; 
+         
+      }
+   }
+
+   @media (max-width:700px){
+      display: block;
+      
+      &__logo{
+         display: none;
+      }
+
+
+      &__title{
+         
+         margin-top:20px; 
+         
+      }
+
+
+      
+   }
+}

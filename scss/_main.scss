@@ -1,0 +1,49 @@
+
+
+
+
+.main{
+   font-family: "PFAgoraSansPro";
+   font-weight: 500;
+   margin: auto 15px;
+   &__title{
+      width: 70%;
+   }
+
+
+   &__container{
+      display: flex;
+      padding: 19px 0;
+      gap:8px;
+      justify-content:flex-start;
+      
+      
+   }
+
+   &__logo:last-child{
+      
+      animation: spin 2s ease-in-out infinite;
+      
+
+   }
+
+   @media (max-width: 799px) {
+      &__logo{
+         display: none;
+      }
+   }
+
+   &__title{
+      padding-left: 15px;
+      
+      font-size: clamp(32px, 12vw, 48px);
+      white-space: pre-wrap;
+      padding-bottom: 150px;
+   }
+
+   @media (max-width: 799px) {
+      &__title{
+         width: 100%;
+      }
+   }
+}

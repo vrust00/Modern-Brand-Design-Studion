@@ -1,0 +1,55 @@
+.awards{
+
+   display:grid;
+   grid-template-columns: 1fr 1fr;
+   margin: 30px 15px 100px 15px;
+
+   &__title{
+      font-size: 64px;
+      margin-left: 15px;
+      grid-column: 1;
+      margin-bottom: 60px;
+   }
+
+   &__items{
+      
+      right: 0;
+      
+      
+   }
+
+   &__item{
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      
+      text-align: right;
+      font-size: 20px;
+      
+   }
+   
+   &__name{
+      text-align: left;
+   }
+
+   &__year{
+      text-align: center;
+      color:grey;
+   }
+
+   &__link-button{
+      text-decoration: none;
+   }
+
+   &__line{
+      margin: 25px auto;
+      background-color: black;
+      height: 1px;
+      width: 100%;
+      
+   }
+
+   @media (max-width: 799px) {
+         grid-template-columns: 1fr;
+   }
+
+}
