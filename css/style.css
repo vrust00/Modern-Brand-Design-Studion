@@ -84,10 +84,11 @@ table {
 }
 
 .line {
-  height: 2px;
+  height: 1px !important;
   background-color: black;
   text-align: center;
-  margin: 0 15px;
+  margin: 0 15px !important;
+  padding: 0 0 !important;
 }
 
 @keyframes spin {
@@ -156,13 +157,14 @@ table {
 .main {
   font-family: "PFAgoraSansPro";
   font-weight: 500;
+  margin: auto 15px;
 }
 .main__title {
-  width: 65vw;
+  width: 70%;
 }
 .main__container {
   display: flex;
-  padding: 19px 15px;
+  padding: 19px 0;
   gap: 8px;
   justify-content: flex-start;
 }
@@ -179,6 +181,11 @@ table {
   font-size: clamp(32px, 12vw, 48px);
   white-space: pre-wrap;
   padding-bottom: 150px;
+}
+@media (max-width: 799px) {
+  .main__title {
+    width: 100%;
+  }
 }
 
 .portfolio {
@@ -248,7 +255,7 @@ table {
   font-family: "PFAgoraSansPro";
   font-weight: 400;
   padding-left: 15px;
-  padding-top: 20px;
+  margin-top: 20px;
   position: relative;
 }
 .stats__container {
@@ -291,6 +298,7 @@ table {
 }
 
 .contacts {
+  text-decoration: none;
   font-family: "PFAgoraSansPro";
   font-weight: 300;
   color: black;
@@ -320,7 +328,9 @@ table {
   margin: 15px 15px;
 }
 .contacts .info {
+  display: block;
   padding-bottom: 10px;
+  text-decoration: none;
 }
 .contacts__item {
   width: 201px;
@@ -336,6 +346,8 @@ table {
 .contacts .office {
   grid-row: 1;
   grid-column: 2;
+  text-decoration: none;
+  margin-bottom: 20px;
 }
 .contacts .social {
   grid-row: 1;
@@ -516,15 +528,12 @@ table {
   padding-right: 15px;
   padding-top: 20px;
   padding-bottom: 20px;
-  position: relative;
 }
 .stats-about__description {
   display: flex;
   justify-content: center;
   height: 246px;
-}
-.stats-about__slogan {
-  font-size: 30px;
+  margin-bottom: 20px;
 }
 .stats-about__num {
   font-size: 105px;
@@ -550,10 +559,174 @@ table {
   color: rgb(70, 70, 70);
 }
 @media (max-width: 799px) {
-  .stats-about__container {
+  .stats-about {
+    height: 80vh;
+  }
+  .stats-about__description {
     display: block;
   }
-  .stats-about__slogan {
-    padding-bottom: 80px;
+  .stats-about__item {
+    margin-top: 36px;
+    text-align: left;
+    width: 100%;
+  }
+  .stats-about__line {
+    width: 100%;
+    height: 1px;
+    background-color: black;
+  }
+}
+
+.services {
+  margin-left: 15px;
+  margin-top: 30px;
+  margin-bottom: 100px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.services__title {
+  font-size: 64px;
+  grid-column: 1;
+  padding-bottom: 16px;
+}
+.services__items {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-column: 2;
+}
+.services__item {
+  width: 25vw;
+  margin-bottom: 40px;
+}
+.services__description {
+  white-space: pre-line;
+  line-height: 1.5;
+}
+.services__item-title {
+  margin-bottom: 20px;
+  color: grey;
+}
+.services__link {
+  grid-column: 2;
+  color: grey;
+  grid-row: 2;
+}
+@media (max-width: 799px) {
+  .services {
+    grid-template-columns: 1fr;
+  }
+  .services__item {
+    width: 100vw;
+  }
+  .services__title {
+    grid-column: 1;
+  }
+  .services__items {
+    grid-column: 1;
+  }
+  .services__link {
+    grid-column: 1;
+    grid-row: 3;
+  }
+}
+@media (max-width: 1200px) {
+  .services__items {
+    grid-template-columns: 1fr;
+  }
+}
+
+.awards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 30px 15px 100px 15px;
+}
+.awards__title {
+  font-size: 64px;
+  margin-left: 15px;
+  grid-column: 1;
+  margin-bottom: 60px;
+}
+.awards__items {
+  right: 0;
+}
+.awards__item {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  text-align: right;
+  font-size: 20px;
+}
+.awards__name {
+  text-align: left;
+}
+.awards__year {
+  text-align: center;
+  color: grey;
+}
+.awards__link-button {
+  text-decoration: none;
+}
+.awards__line {
+  margin: 25px auto;
+  background-color: black;
+  height: 1px;
+  width: 100%;
+}
+@media (max-width: 799px) {
+  .awards {
+    grid-template-columns: 1fr;
+  }
+}
+
+.team {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 30px 15px 0 15px;
+  font-size: 20px;
+  font-weight: 300;
+  margin-bottom: 100px;
+}
+.team__title {
+  font-size: 64px;
+  margin-left: 15px;
+  grid-column: 1;
+  margin-bottom: 20px;
+}
+.team__mates-container {
+  display: grid;
+  grid-template-columns: 25vw 25vw;
+  gap: 20px;
+}
+.team__img {
+  width: 100%;
+  margin-bottom: 17px;
+}
+.team__function {
+  color: grey;
+  margin-bottom: 10px;
+  width: 70%;
+}
+.team__name {
+  margin-bottom: 10px;
+}
+.team__line {
+  grid-column: 2;
+  height: 1px;
+  background-color: black;
+  width: 100%;
+  margin: 41px auto;
+}
+.team__mates {
+  grid-column: 2;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+@media (max-width: 799px) {
+  .team {
+    display: block;
+  }
+  .team__mates-container {
+    display: block;
   }
 }/*# sourceMappingURL=style.css.map */

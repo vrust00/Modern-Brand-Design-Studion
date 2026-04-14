@@ -5,15 +5,15 @@
 .main{
    font-family: "PFAgoraSansPro";
    font-weight: 500;
-   
+   margin: auto 15px;
    &__title{
-      width: 65vw;
+      width: 70%;
    }
 
 
    &__container{
       display: flex;
-      padding: 19px 15px;
+      padding: 19px 0;
       gap:8px;
       justify-content:flex-start;
       
@@ -41,4 +41,9 @@
       padding-bottom: 150px;
    }
 
+   @media (max-width: 799px) {
+      &__title{
+         width: 100%;
+      }
+   }
 }

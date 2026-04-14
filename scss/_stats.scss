@@ -2,12 +2,14 @@
    font-family: "PFAgoraSansPro";
    font-weight: 400;
    padding-left: 15px;
-   padding-top: 20px;
+   margin-top: 20px;
+   
    position: relative;
    &__container{
       display: flex;
       justify-content: flex-start;
       gap:25vw;
+      
    }
 
    &__slogan{
@@ -57,7 +59,7 @@
    @media (max-width: 799px) {
       &__container{
          display:block;
-
+         
       }
 
       &__slogan{
@@ -65,3 +67,4 @@
       }
    }
 }
+
