@@ -12,26 +12,27 @@
 
    &__hidden{
       display: none;
-   }
-   
-   &__menu-links {
-      display: none;
+      
       
    }
+   
+   .hide{
+      display: none;
+      
+      
+   }
+   
+
 
    &__container{
       display: flex;
       justify-content:space-between;
       padding: 15px 20px;
 
-      
-
-      
    }
 
    &__pages {
          display: flex;
-         
       }
 
    @media (max-width: 799px) {
@@ -41,11 +42,10 @@
       
       }
 
+      &__pages{
+         display: none;
+      }
 
-
-
-
-      
       &__hidden{
          
          display: flex;
@@ -73,16 +73,21 @@
             right: 15px;
             margin-top: 5px;
             font-size: 20px;
-
+            
+            background: none;
+            border: none;
+            cursor: pointer;
+            
+            
          }
+
+         
 
          
 
 
       }
-      &__pages{
-         display: none;
-      }
+      
 
    }
 

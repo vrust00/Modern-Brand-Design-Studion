@@ -107,7 +107,7 @@ table {
 .header__hidden {
   display: none;
 }
-.header__menu-links {
+.header .hide {
   display: none;
 }
 .header__container {
@@ -121,6 +121,9 @@ table {
 @media (max-width: 799px) {
   .header__container {
     justify-content: start;
+  }
+  .header__pages {
+    display: none;
   }
   .header__hidden {
     display: flex;
@@ -142,9 +145,9 @@ table {
     right: 15px;
     margin-top: 5px;
     font-size: 20px;
-  }
-  .header__pages {
-    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
   }
 }
 
