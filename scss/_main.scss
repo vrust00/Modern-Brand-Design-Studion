@@ -6,12 +6,13 @@
    font-family: "PFAgoraSansPro";
    font-weight: 500;
    margin: auto 15px;
+
    &__title{
       width: 70%;
    }
 
 
-   &__container{
+   &__logo-wrapper{
       display: flex;
       padding: 19px 0;
       gap:8px;
