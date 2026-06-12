@@ -107,6 +107,19 @@ table {
 .header__hidden {
   display: none;
 }
+.header__menu-bar {
+  padding-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: 15px;
+  width: -moz-fit-content;
+  width: fit-content;
+  text-align: center;
+}
+.header__menu-bar .page {
+  margin-bottom: 10px;
+}
 .header .hide {
   display: none;
 }
