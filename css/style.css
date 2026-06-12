@@ -104,70 +104,95 @@ table {
   font-weight: 300;
   color: black;
 }
-.header__hidden {
-  display: none;
+.header__wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 20px;
 }
-.header__menu-bar {
+.header__logo-link {
+  display: flex;
+  align-items: center;
+  line-height: 0;
+  text-decoration: none;
+}
+.header__logo {
+  display: block;
+}
+.header__mobile {
+  display: none;
+  align-items: start;
+}
+.header__mobile-icon {
+  width: 25px;
+  position: relative;
+}
+.header__mobile-icon:nth-child(2) {
+  animation: spin 2s ease-in-out infinite;
+}
+.header__mobile-menu-btn {
+  color: black;
+  text-decoration: none;
+  font-size: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-left: auto;
+}
+.header__pages {
+  display: flex;
+}
+.header__pages-page {
+  color: black;
+  text-decoration: none;
+  letter-spacing: 5%;
+  margin-right: 15px;
+}
+.header__mobile-menu {
   padding-bottom: 10px;
   display: flex;
   flex-direction: column;
   margin-left: auto;
-  margin-right: 15px;
+  margin-right: 20px;
   width: -moz-fit-content;
   width: fit-content;
   text-align: center;
 }
-.header__menu-bar .page {
+.header__mobile-menu-page {
+  color: black;
+  text-decoration: none;
+  letter-spacing: 5%;
   margin-bottom: 10px;
 }
 .header .hide {
   display: none;
 }
-.header__container {
-  display: flex;
-  justify-content: space-between;
-  padding: 15px 20px;
-}
-.header__pages {
-  display: flex;
-}
 @media (max-width: 799px) {
-  .header__container {
+  .header__wrapper {
     justify-content: start;
   }
   .header__pages {
     display: none;
   }
-  .header__hidden {
+  .header__mobile {
     display: flex;
+    align-items: center;
     padding-left: 10px;
-    margin-left: 0;
+    margin-left: 10px;
+    gap: 5px;
+    width: 100%;
   }
-  .header__hidden__logo {
-    position: relative;
-    padding-right: 1px;
-    width: 25px;
+  .header__mobile-menu-page {
+    white-space: nowrap;
+    margin-bottom: 15px;
   }
-  .header__hidden__logo:nth-child(2) {
-    animation: spin 2s ease-in-out infinite;
-  }
-  .header__hidden__menu {
-    color: black;
-    position: absolute;
-    text-decoration: none;
-    right: 15px;
-    margin-top: 5px;
-    font-size: 20px;
-    background: none;
-    border: none;
-    cursor: pointer;
+  .header__mobile-menu-page:last-child {
+    margin-bottom: 0;
   }
 }
 
-.page {
-  color: black;
-  text-decoration: none;
-  letter-spacing: 5%;
+.line {
+  height: 1px;
+  background-color: #000;
 }
 
 .main {

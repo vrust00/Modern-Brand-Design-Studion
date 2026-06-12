@@ -1,125 +1,128 @@
 @keyframes spin {
-         0% { transform: rotate(0deg); }
-         100% { transform: rotate(360deg); }
+   0% { transform: rotate(0deg); }
+   100% { transform: rotate(360deg); }
 }
 
-
-
 .header {
-   
    font-family: "PFAgoraSansPro";
    font-weight: 300;
    color: black;
 
-   &__hidden{
-      display: none;
-      
-      
+   // Основные элементы
+   &__wrapper {
+      display: flex;
+      justify-content: space-between;
+      padding: 15px 20px;
    }
-   &__menu-bar{
-         padding-bottom: 10px;
-         display:flex;
-         flex-direction: column;
-         margin-left: auto;
-         margin-right: 15px;
-         width: fit-content;
-         text-align: center;
-         .page {
-            margin-bottom: 10px;
-            
-         }
-         
-         
 
+   &__logo-link {
+      display: flex;
+      align-items: center;
+      line-height: 0;
+      text-decoration: none;
+   }
 
+   &__logo {
+      display: block;
+   }
+
+   
+   &__mobile {
+      display: none;
+      align-items: start;
+   }
+
+   &__mobile-icon {
+      width: 25px;
+      position: relative;
+      
+      &:nth-child(2) {
+         animation: spin 2s ease-in-out infinite;
       }
+   }
 
-
-
-
-   .hide{
-      display: none;
-      
-      
+   &__mobile-menu-btn {
+      color: black;
+      text-decoration: none;
+      font-size: 20px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      margin-left: auto;
       
    }
+
+   
+   &__pages {
+      display: flex;
+   }
+
+   &__pages-page {
+      color: black;
+      text-decoration: none;
+      letter-spacing: 5%;
+      margin-right: 15px;
+   }
+
+   
+   &__mobile-menu {
+      padding-bottom: 10px;
+      display: flex;
+      flex-direction: column;
+      margin-left: auto;
+      margin-right: 20px;
+      width: fit-content;
+      text-align: center;
+   }
+
+   &__mobile-menu-page {
+      color: black;
+      text-decoration: none;
+      letter-spacing: 5%;
+      margin-bottom: 10px;
+   }
+
    
 
-
-   &__container{
-      display: flex;
-      justify-content:space-between;
-      padding: 15px 20px;
-
+   
+   .hide {
+      display: none;
    }
 
-   &__pages {
-         display: flex;
-         
-      }
-
+   // Мобильная версия
    @media (max-width: 799px) {
-
-      &__container{
-         justify-content:start;
-      
+      &__wrapper {
+         justify-content: start;
       }
 
-      &__pages{
+      &__pages {
          display: none;
       }
 
-      &__hidden{
-         
+      &__mobile {
          display: flex;
-         padding-left: 10px;  
-         margin-left: 0;
-         
-         &__logo{
-            
-            position: relative;
-            padding-right: 1px;
-            width: 25px;
-            
-         }
-
-         &__logo:nth-child(2){
-               animation: spin 2s ease-in-out infinite;
-            }
-
-         
-
-         &__menu {
-            color: black;
-            position: absolute;
-            text-decoration: none;
-            right: 15px;
-            margin-top: 5px;
-            font-size: 20px;
-            
-            background: none;
-            border: none;
-            cursor: pointer;
-            
-            
-         }
-
-         
-
-         
-
-
+         align-items: center;
+         padding-left: 10px;
+         margin-left: 10px;
+         gap: 5px;
+         width: 100%;
       }
-      
 
+     
+
+      &__mobile-menu-page {
+         white-space: nowrap;
+         margin-bottom: 15px;
+         
+         &:last-child {
+            margin-bottom: 0;
+         }
+      }
    }
-
-
 }
 
-.page{
-            color: black;
-            text-decoration: none;
-            letter-spacing: 5%;
-            
-         }
+
+.line {
+   height: 1px;
+   background-color: #000;
+}
